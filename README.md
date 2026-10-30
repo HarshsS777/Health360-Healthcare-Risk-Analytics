@@ -26,6 +26,12 @@ Healthcare systems and primary care clinics frequently encounter delayed risk de
 * **Web App Local Host:** `http://127.0.0.1:5500/templates/index.html`
 * **Snowflake Database:** `HEALTH360_DB` (Warehouse: `HEALTH360_WH`, 345ms Query Execution)
 
+## 🎥 Project Video Demonstration
+
+[![Watch Video Demonstration](https://img.shields.io/badge/Watch%20Demo-Google%20Drive-blue?logo=googledrive)](https://drive.google.com/file/d/1rjcjAxSqOfukvlyyWSpYEldC_7BHgE9G/view?usp=sharing)
+
+* **Direct Demonstration Video Link:** [Health360 Project Demonstration Video](https://drive.google.com/file/d/1rjcjAxSqOfukvlyyWSpYEldC_7BHgE9G/view?usp=sharing)
+
 ---
 
 ## Architecture
