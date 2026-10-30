@@ -19,6 +19,13 @@ Healthcare systems and primary care clinics frequently encounter delayed risk de
 3. **Multi-Variable Risk Stratification:** Dynamically categorizes patient populations into **High Risk**, **Moderate Risk**, and **Low Risk** tiers. Patients with BP ≥ 140 mmHg or Glucose ≥ 140 mg/dL represent 86% of High-Risk assignments.
 4. **Embedded Web Analytics Hub:** Features 2 master Tableau dashboards and a 4-Scene Executive Narrative Story seamlessly embedded into a Flask web shell via the Tableau JavaScript API v2.
 
+
+## 🔗 Quick Links & Resources
+
+* **GitHub Repository:** [Health360 Repository](https://github.com/HarshsS777/Health360-Healthcare-Risk-Analytics)
+* **Web App Local Host:** `http://127.0.0.1:5500/templates/index.html`
+* **Snowflake Database:** `HEALTH360_DB` (Warehouse: `HEALTH360_WH`, 345ms Query Execution)
+
 ---
 
 ## Architecture
@@ -60,3 +67,4 @@ flowchart TD
     style D fill:#29b5e8,stroke:#000,stroke-width:2px,color:#fff
     style E fill:#e97627,stroke:#000,stroke-width:2px,color:#fff
     style I fill:#4CAF50,stroke:#000,stroke-width:2px,color:#fff
+
