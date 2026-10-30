@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health360 - Executive Healthcare Analytics</title>
+    <!-- Tableau JS API v2 -->
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #0284c7;
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 24px;
+            min-height: 100vh;
+        }
+
+        /* Navbar Header */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto 20px auto;
+            background: var(--card-bg);
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .brand h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .brand p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .badges {
+            display: flex;
+            gap: 10px;
+        }
+
+        .badge {
+            background-color: #e0f2fe;
+            color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Stat Cards Row */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            max-width: 1400px;
+            margin: 0 auto 20px auto;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 16px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .stat-card span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .stat-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        /* Analytics Main Container */
+        .viz-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            padding: 16px;
+            overflow: hidden;
+        }
+
+        /* Fixed Pixel Height ensures container never collapses */
+        #vizContainer {
+            width: 100%;
+            height: 850px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="brand">
+            <h1>Health360 Analytics Platform</h1>
+            <p>Comprehensive Healthcare Risk & Disease Intelligence Hub</p>
+        </div>
+        <div class="badges">
+            <span class="badge">Tableau JS API v2</span>
+            <span class="badge">5,000 Patient Cohort</span>
+        </div>
+    </header>
+
+    <!-- Stat Highlights -->
+    <section class="stats-grid">
+        <div class="stat-card">
+            <span>Total Evaluated</span>
+            <h3>5,000 Records</h3>
+        </div>
+        <div class="stat-card" style="border-left-color: #e11d48;">
+            <span>Avg Blood Pressure</span>
+            <h3>134.0 mmHg</h3>
+        </div>
+        <div class="stat-card" style="border-left-color: #059669;">
+            <span>Avg Glucose Level</span>
+            <h3>134.8 mg/dL</h3>
+        </div>
+        <div class="stat-card" style="border-left-color: #d97706;">
+            <span>Primary Focus</span>
+            <h3>Risk Stratification</h3>
+        </div>
+    </section>
+
+    <!-- Analytics Dashboard Container -->
+    <main class="viz-wrapper">
+        <div id="vizContainer"></div>
+    </main>
+
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://public.tableau.com/views/Health360_Healthcare_Risk_Analytics/Health360_Executive_Story1",
+                options = {
+                    hideTabs: false,
+                    width: "100%",
+                    height: "100%",
+                    onFirstInteractive: function () {
+                        console.log("Health360 Tableau Story Loaded Successfully.");
+                    }
+                };
+            var viz = new tableau.Viz(containerDiv, url, options);
+        }
+
+        document.addEventListener("DOMContentLoaded", initViz);
+    </script>
+
+</body>
+</html>
